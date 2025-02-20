@@ -1,6 +1,6 @@
 import { Expect, Equal } from "@total-typescript/helpers";
 
-const goToLocation = (coordinates: [number, number, number?]) => {
+const goToLocation = (coordinates: Array<number>) => {
   const latitude = coordinates[0];
   const longitude = coordinates[1];
   const elevation = coordinates[2];
@@ -10,7 +10,7 @@ const goToLocation = (coordinates: [number, number, number?]) => {
   type tests = [
     Expect<Equal<typeof latitude, number>>,
     Expect<Equal<typeof longitude, number>>,
-    Expect<Equal<typeof elevation, number | undefined>>
+    Expect<Equal<typeof elevation, number | undefined>>,
   ];
 };
 
